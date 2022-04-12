@@ -1,12 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 * {
   margin: 0;
   box-sizing: border-box;
 }
-img {
-  max-width: 100%;
-  height: auto;
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+body {
+  margin-top: 80px;
+  font-family: "Lato", sans-serif;
 }
-.btn{
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.btn {
   padding: 8px 10px;
   cursor: pointer;
+  text-align: center;
+  font-size: 1.01rem;
+  font-weight: 700;
+  border: none;
+  background-color: rgb(180, 197, 27);
+  color: white;
+}
+section {
+  padding: 20px;
+  margin: 50px 20px;
 }

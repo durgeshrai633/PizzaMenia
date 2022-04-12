@@ -1,37 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import AuthForm from "./AuthForm";
-
+import { Link, useNavigate } from "react-router-dom";
+import CartCard from "./CartCard";
+import "./cart.css"
 function Cart() {
-  const { cartItems, totalPrice } = useSelector((state) => state.cart);
+  const { cartItems } = useSelector((state) => state.cart);
   const { isAuth } = useSelector((state) => state.auth);
-  const [showAuthForm, setShowAuthForm] = useState(false);
+  const navigate = useNavigate();
   const doCheckOut = () => {
     if (isAuth) {
-      console.log("You are logged in");
+      alert("You are checked out");
     } else {
-      setShowAuthForm(!isAuth);
-      console.log("You are not logged in");
+      navigate("/login");
     }
   };
-  console.log(cartItems, totalPrice);
+  console.log(isAuth);
   return (
-    <section>
+    <section className="cart">
       <div className='pizza'>
-        {cartItems.map((pizza, index) => {
-          return (
-            <div className='card' key={pizza.id}>
-              <img src={pizza.pizzaImage} alt='' />
-              <p>{pizza.pizzaName}</p>
-              <p>{pizza.pizzaPrice}</p>
-            </div>
-          );
-        })}
+        {cartItems.length ? (
+          cartItems.map((pizza, index) => {
+            return <CartCard key={pizza.id} pizza={pizza}></CartCard>;
+          })
+        ) : (
+          <>
+            <h1 style={{ display: "block" }}>
+              No Items In your cart. <Link to={"/"}>See Products</Link>
+            </h1>
+          </>
+        )}
       </div>
-      <button className='btn' onClick={() => doCheckOut()}>
-        CheckOut
-      </button>
-      {showAuthForm && <AuthForm></AuthForm>}
+      <div className='' style={{ textAlign: "center", margin: "30px 0" }}>
+        <button className='btn checkout-btn' onClick={() => doCheckOut()}>
+          CheckOut
+        </button>
+      </div>
     </section>
   );
 }

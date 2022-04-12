@@ -13,37 +13,39 @@ function SignUp() {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   return (
-    <div>
-      <form onSubmit={(e) => e.preventDefault()} autoComplete='on'>
-        <input
-          type='email'
-          defaultValue={user.email}
-          name='email'
-          id='email'
-          placeholder='Email'
-          onChange={handleUser}
-        />
-        <input
-          type='text'
-          defaultValue={user.name}
-          name='name'
-          id='name'
-          placeholder='Enter Name'
-          onChange={handleUser}
-        />
-        <input
-          type='password'
-          name='password'
-          defaultValue={user.password}
-          id='password'
-          placeholder='Password'
-          onChange={handleUser}
-        />
-        <button type='submit' onClick={() => signUp()}>
-          Sign Up
-        </button>
-      </form>
-    </div>
+    <section>
+      <div className='form'>
+        <form onSubmit={(e) => e.preventDefault()} autoComplete='on'>
+          <input
+            type='email'
+            defaultValue={user.email}
+            name='email'
+            id='email'
+            placeholder='Email'
+            onChange={handleUser}
+          />
+          <input
+            type='text'
+            defaultValue={user.name}
+            name='name'
+            id='name'
+            placeholder='Enter Name'
+            onChange={handleUser}
+          />
+          <input
+            type='password'
+            name='password'
+            defaultValue={user.password}
+            id='password'
+            placeholder='Password'
+            onChange={handleUser}
+          />
+          <button type='submit' className='btn' onClick={() => signUp()}>
+            Sign Up
+          </button>
+        </form>
+      </div>
+    </section>
   );
 }
 

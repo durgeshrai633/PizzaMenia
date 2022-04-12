@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./header.css";
 function Header() {
   useEffect(() => {}, []);
   return (
     <header>
       <nav>
         <div className='nav'>
+          <h1 className='logo'>Pizza Minia</h1>
           <ul className='nav-list'>
             <li className='nav-item'>
               <Link to={"/"}>Home</Link>{" "}
@@ -28,7 +30,10 @@ function Header() {
           </ul>
           <div className='right'>
             <Link to={"/cart"}>
-                Cart
+              <i className='fa fa-shopping-cart'></i>
+            </Link>
+            <Link to={"/login"}>
+              <i className='fa fa-user'></i>
             </Link>
           </div>
         </div>
