@@ -1,14 +1,15 @@
 .footer {
-  background-color: rgb(180, 197, 27);
+  background-color: #2b2c7f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
+  color: #f14348;
 }
 .logo-footer {
   font-size: 1.8rem;
   font-family: cursive;
-  color: black;
+  color: #f14348;
 }
 .footer-middle {
   display: flex;
@@ -21,6 +22,7 @@
   display: flex;
   gap: 10px;
   font-size: 2rem;
+  color: #f14348;
 }
 .fa-brands {
   cursor: pointer;

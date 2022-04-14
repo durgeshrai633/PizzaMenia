@@ -8,8 +8,8 @@ function Footer() {
       </div>
       <div className='footer-middle'>
         <div className='social-media-links'>
-          <i class='fa-brands fa-facebook'></i>
-          <i class='fa-brands fa-instagram'></i>
+          <i className='fa-brands fa-facebook'></i>
+          <i className='fa-brands fa-instagram'></i>
           <i className='fa-brands fa-linkedin'></i>
           <i className='fa-brands fa-youtube'></i>
         </div>

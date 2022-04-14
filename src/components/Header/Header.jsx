@@ -26,12 +26,9 @@ function Header() {
             <li className='nav-item'>
               <Link to={"/events"}>Events</Link>{" "}
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link to={"/blog"}>Blog</Link>{" "}
-            </li>
-            <li className='nav-item'>
-              <Link to={"/contact"}>Menu</Link>{" "}
-            </li>
+            </li> */}
             {isAuth && (
               <li className='nav-item'>
                 <Link to={"/account"}>Your Account</Link>{" "}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createUser } from "../Store/authSlice";
+import { createUser } from "../../Store/authSlice";
 
 function SignUp() {
   const [user, setUser] = useState({ email: "", name: "", password: "" });
@@ -14,7 +14,9 @@ function SignUp() {
   };
   return (
     <section>
-      <h1 style={{ textAlign: "center" }}>Sign Up </h1>
+      <h1 className='accent' style={{ textAlign: "center" }}>
+        Sign Up{" "}
+      </h1>
       <div className='form'>
         <form onSubmit={(e) => e.preventDefault()} autoComplete='on'>
           <input

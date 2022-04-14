@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart, totalPrice } from "../Store/cartSlice";
+import { addToCart } from "../../Store/cartSlice";
 
 function ProductCard({ pizza }) {
   const [productCount, setProductCount] = useState(0);
@@ -28,12 +28,12 @@ function ProductCard({ pizza }) {
     if (productCount && cartButton.current.disabled) {
       dispatch(addToCart({ ...pizza, productCount }));
     }
-  }, [productCount]);
+  }, [dispatch, pizza, productCount]);
   return (
     <div className='card'>
       <img src={pizza.pizzaImage} alt='' />
       <p className='pizza-name'>{pizza.pizzaName}</p>
-      <p className='pizza-price'>{pizza.pizzaPrice}</p>
+      <p className='pizza-price'>{pizza.pizzaPrice} &#8377;</p>
       <button
         className='btn add-to-cart-btn'
         onClick={() => addPizzaToCart(pizza)}

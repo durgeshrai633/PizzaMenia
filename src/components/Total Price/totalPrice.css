@@ -1,0 +1,14 @@
+.total-div {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  color: #2b2c7f;
+}
+.total-table {
+  text-align: center;
+}
+.total-table td {
+  border: 1px dotted #ddd;
+  padding: 8px;
+  margin: 5px;
+}

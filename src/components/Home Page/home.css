@@ -1,4 +1,4 @@
-.pizza {
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -15,6 +15,7 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: all 0.3s ease-in-out;
   position: relative;
+  color: #2b2c7f;
 }
 .card:hover {
   transform: scale(1.01);
@@ -29,20 +30,16 @@
   content: "Rs.";
   padding: 3px;
 }
-.pizza-price::after {
-  content: " $";
-}
 .pizza-price {
-  /* font-size: 1.004rem; */
   font-weight: 500;
 }
 .add-to-cart-btn {
-  background-color: rgb(180, 197, 27);
-  color: white;
+  background-color: #f14348;
+  color: #fbfeff;
 }
 .checkout-btn {
   width: 50%;
-  background-color: rgb(180, 197, 27);
+  background-color: #f14348;
   color: white;
 }
 .product-counter {
@@ -61,6 +58,6 @@
 .heading {
   text-align: center;
   font-weight: 800;
-  color: rgb(180, 197, 27);
+  color: #2b2c7f;
   font-size: 2rem;
 }

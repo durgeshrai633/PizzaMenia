@@ -1,0 +1,6 @@
+.card-circle {
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}

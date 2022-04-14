@@ -1,6 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, totalPrice } from "../Store/cartSlice";
+import { useSelector } from "react-redux";
 import "./home.css";
 import ProductCard from "./ProductCard";
 function Home() {
@@ -9,7 +8,7 @@ function Home() {
   return (
     <section id='home'>
       <h1 className='heading'>Your Faviorate Pizzas</h1>
-      <div className='pizza'>
+      <div className='cards'>
         {pizza.length &&
           pizza.map((pizza) => {
             console.log("hi");

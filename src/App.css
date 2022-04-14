@@ -9,6 +9,7 @@
 body {
   margin-top: 80px;
   font-family: "Lato", sans-serif;
+  background-color: #fbfeff;
 }
 img {
   width: 100%;
@@ -25,8 +26,8 @@ img {
   font-size: 1.01rem;
   font-weight: 700;
   border: none;
-  background-color: rgb(180, 197, 27);
-  color: white;
+  background-color: #f14348;
+  color: #fbfeff;
 }
 .btn:disabled {
   cursor: not-allowed;
@@ -38,4 +39,11 @@ section {
 }
 .text-large {
   font-size: 3rem;
+  text-align: center;
+}
+.accent {
+  color: #2b2c7f;
+}
+.primary {
+  color: #f14348;
 }

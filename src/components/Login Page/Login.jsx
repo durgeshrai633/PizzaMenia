@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { loginUser } from "../Store/authSlice";
-import "./form.css";
+import { loginUser } from "../../Store/authSlice";
+import "../form.css";
 function Login() {
   const [userDetails, setUserDetails] = useState({
     email: "",
@@ -25,7 +25,7 @@ function Login() {
   }, [isAuth]);
   return (
     <section>
-      <h1 style={{ textAlign: "center" }}>Login </h1>
+      <h1 className="accent" style={{ textAlign: "center" }}>Login </h1>
       <div className='form'>
         <form onSubmit={handleLogin} autoComplete='on'>
           <input

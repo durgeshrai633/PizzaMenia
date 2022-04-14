@@ -3,13 +3,13 @@
   right: 20px;
   bottom: 20px;
   font-size: 22px;
-  color: red;
   cursor: pointer;
+  color: #f14348;
 }
 .cart-product-count {
   font-size: 2rem;
   position: absolute;
-  color: rgb(180, 197, 27);
+  color: #f14348;
   padding: 10px;
   border-radius: 20% 10% 20% 10%;
   font-weight: 700;
