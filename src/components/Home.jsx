@@ -8,6 +8,7 @@ function Home() {
 
   return (
     <section id='home'>
+      <h1 className='heading'>Your Faviorate Pizzas</h1>
       <div className='pizza'>
         {pizza.length &&
           pizza.map((pizza) => {

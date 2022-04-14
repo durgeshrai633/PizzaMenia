@@ -14,6 +14,7 @@ function SignUp() {
   };
   return (
     <section>
+      <h1 style={{ textAlign: "center" }}>Sign Up </h1>
       <div className='form'>
         <form onSubmit={(e) => e.preventDefault()} autoComplete='on'>
           <input

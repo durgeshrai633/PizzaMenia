@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../Store/authSlice";
 import "./form.css";
 function Login() {
@@ -9,7 +9,9 @@ function Login() {
     password: "",
   });
   const { error } = useSelector((state) => state.auth);
+  const { isAuth } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleDetails = (e) => {
     setUserDetails({ ...userDetails, [e.target.name]: e.target.value });
   };
@@ -17,8 +19,13 @@ function Login() {
     e.preventDefault();
     dispatch(loginUser(userDetails));
   };
+
+  useEffect(() => {
+    if (isAuth) navigate("/account");
+  }, [isAuth]);
   return (
     <section>
+      <h1 style={{ textAlign: "center" }}>Login </h1>
       <div className='form'>
         <form onSubmit={handleLogin} autoComplete='on'>
           <input

@@ -10,10 +10,11 @@
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  flex-basis: 270px;
+  flex-basis: 290px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 .card:hover {
   transform: scale(1.01);
@@ -43,4 +44,23 @@
   width: 50%;
   background-color: rgb(180, 197, 27);
   color: white;
+}
+.product-counter {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 10px;
+}
+.counter-btn {
+  padding: 5px 15px;
+}
+.heading {
+  text-align: center;
+  font-weight: 800;
+  color: rgb(180, 197, 27);
+  font-size: 2rem;
 }

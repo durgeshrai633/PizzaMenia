@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import CartCard from "./CartCard";
-import "./cart.css"
+import "./cart.css";
 function Cart() {
   const { cartItems } = useSelector((state) => state.cart);
   const { isAuth } = useSelector((state) => state.auth);
   const navigate = useNavigate();
+  console.log(cartItems);
   const doCheckOut = () => {
     if (isAuth) {
       alert("You are checked out");
@@ -14,9 +15,8 @@ function Cart() {
       navigate("/login");
     }
   };
-  console.log(isAuth);
   return (
-    <section className="cart">
+    <section className='cart'>
       <div className='pizza'>
         {cartItems.length ? (
           cartItems.map((pizza, index) => {

@@ -16,9 +16,10 @@ nav {
   flex-wrap: wrap;
   align-items: center;
 }
-.logo{
+.logo > a{
   font-size: 1.8rem;
   font-family: cursive;
+  color: black;
 }
 .nav-list {
   list-style-type: none;

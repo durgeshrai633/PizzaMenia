@@ -9,7 +9,17 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, { payload }) => {
-      state.cartItems.push(payload);
+      let add = true;
+      if (state.cartItems.length > 0) {
+        state.cartItems.forEach((pizza) => {
+          if (payload.id == pizza.id) {
+            console.log("hi");
+            pizza.productCount = payload.productCount;
+            add = false;
+          }
+        });
+      }
+      if (add) state.cartItems.push(payload);
     },
     totalPrice: (state) => {
       let sum = 0;
