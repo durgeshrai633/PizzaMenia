@@ -32,23 +32,23 @@
 
 ### Products Page
 
-![Product's page](/client/public/images/products.png "The Pizza Menia")
+![Product's page](/public/images/products.png "The Pizza Menia")
 
 ### Menu Page
 
-![Product's page](/client/public/images/Menu.png "The Pizza Menia")
+![Product's page](/public/images/Menu.png "The Pizza Menia")
 
 ### Cart Page
 
-![Product's page](/client/public/images/cart.png "The Pizza Menia")
+![Product's page](/public/images/cart.png "The Pizza Menia")
 
 ### Login Page
 
-![Product's page](/client/public/images/login.png "The Pizza Menia")
+![Product's page](/public/images/login.png "The Pizza Menia")
 
 ### Payment Page
 
-![Product's page](/client/public/images/payment.png "The Pizza Menia")
+![Product's page](/public/images/payment.png "The Pizza Menia")
 
 ## Deployed URL [https://pizzamenia.netlify.app/](https://pizzamenia.netlify.app/)
 
