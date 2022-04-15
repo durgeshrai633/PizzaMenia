@@ -22,6 +22,7 @@
 4. Login Required
 5. Pagination
 6. Payment
+7. Responsive Layout
 
 ## Project Images
 
