@@ -28,7 +28,7 @@
 
 ### Home Page
 
-![The Pizza Menia](/client/public/images/pizzaMeniaBanner.png "Pizza Menia")
+![The Pizza Menia](/public/images/pizzaMeniaBanner.png "Pizza Menia")
 
 ### Products Page
 
