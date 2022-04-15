@@ -31,9 +31,9 @@ function TotalPrice() {
         </thead>
         <tbody>
           {cartItems.length
-            ? cartItems.map((pizza) => {
+            ? cartItems.map((pizza,index) => {
                 return (
-                  <tr className='pizza-price-details'>
+                  <tr className='pizza-price-details' key={index}>
                     <td>{pizza.pizzaName}</td>
                     <td>{pizza.pizzaPrice} &#8377;</td>
                     <td>

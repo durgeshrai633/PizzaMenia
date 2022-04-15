@@ -1,0 +1,16 @@
+.fa-trash {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #f14348;
+}
+.cart-product-count {
+  font-size: 2rem;
+  position: absolute;
+  color: #f14348;
+  padding: 10px;
+  border-radius: 20% 10% 20% 10%;
+  font-weight: 700;
+}

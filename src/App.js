@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Account from "./components/Account Page/Account";
-import Cart from "./components/Cart Page/Cart";
-import Events from "./components/Event Page/Events";
+import Account from "./components/AccountPage/Account";
+import Cart from "./components/CartPage/Cart";
+import Events from "./components/EventPage/Events";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Home from "./components/Home Page/Home";
-import Login from "./components/Login Page/Login";
-import Menu from "./components/Menu Page/Menu";
-import SignUp from "./components/Signup Page/SignUp";
+import Home from "./components/HomePage/Home";
+import Login from "./components/LoginPage/Login";
+import Menu from "./components/MenuPage/Menu";
+import SignUp from "./components/SignupPage/SignUp";
 function App() {
   return (
     <>

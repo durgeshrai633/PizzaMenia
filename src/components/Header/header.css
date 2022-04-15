@@ -6,9 +6,6 @@ header {
   width: 100%;
   background-color: #fbfeff;
 }
-nav {
-  padding: 10px;
-}
 .nav {
   padding: 20px;
   display: flex;
@@ -33,7 +30,9 @@ nav {
   font-size: 1.1rem;
   color: #2b2c7f;
 }
-
+.nav-item {
+  position: relative;
+}
 a {
   text-decoration: none;
 }
@@ -46,3 +45,16 @@ a {
   justify-content: center;
   gap: 20px;
 }
+.hidden {
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  padding:20px;
+  background-color: white;
+  border-radius: 10px;
+  display: none;
+}
+.fa-user-check:hover .hidden{
+  display: block;
+}
+

@@ -1,11 +1,16 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { logout } from "../../Store/authSlice";
 import "./header.css";
 function Header() {
   const { isAuth } = useSelector((state) => state.auth);
-  console.log(isAuth);
-  useEffect(() => {}, []);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const doLogout = () => {
+    dispatch(logout());
+    navigate("/");
+  };
   return (
     <header>
       <nav>
@@ -41,7 +46,14 @@ function Header() {
             </Link>
             {isAuth ? (
               <Link to={"/account"}>
-                <i className='fa fa-user-check'></i>
+                <i className='fa fa-user-check'>
+                  {" "}
+                  <div className='hidden'>
+                    <button className='btn' onClick={() => doLogout()}>
+                      Logout
+                    </button>
+                  </div>
+                </i>
               </Link>
             ) : (
               <Link to={"/login"}>

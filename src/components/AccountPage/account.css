@@ -1,0 +1,17 @@
+.account-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* align-items: center; */
+    margin: 50px 20px;
+    padding: 20px;
+}
+.account-field{
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+}
+.account-field span{
+    display: block;
+    padding: 10px;    
+}

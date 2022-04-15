@@ -40,8 +40,8 @@ const authSlice = createSlice({
     loginUser: (state, { payload }) => {
       if (state.emails.includes(payload.email)) {
         state.users.forEach((user) => {
-          if (payload.email == user.email) {
-            if (payload.password == user.password) {
+          if (payload.email === user.email) {
+            if (payload.password === user.password) {
               state.isAuth = true;
               state.currentUser = { ...user };
               state.error = "You are logged in";
@@ -54,9 +54,24 @@ const authSlice = createSlice({
         state.error = "You are not registered";
       }
     },
+    logout: (state) => {
+      state.isAuth = false;
+      state.currentUser = {};
+    },
+    addDetails: (state, { payload }) => {
+      for (let i = 0; i < state.users.length; i++) {
+        if (state.users[i].email === state.currentUser.email) {
+          state.users[i] = { ...state.users[i], ...payload };
+          state.currentUser = { ...state.currentUser, ...payload };
+          console.log(state.currentUser);
+          break;
+        }
+      }
+    },
   },
 });
 
-export const { loginUser, checkAuth, createUser } = authSlice.actions;
+export const { loginUser, checkAuth, createUser, logout, addDetails } =
+  authSlice.actions;
 
 export default authSlice.reducer;
